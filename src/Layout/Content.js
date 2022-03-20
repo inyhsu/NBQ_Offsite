@@ -11,14 +11,12 @@ const ContentWrapper = styled.div`
     margin: 0;
     font-size: 14px;
     color: #9e9e9e;
-    text-transform: uppercase;
     padding: 6px;
   }
   table {
     width: 100%;
     border-spacing: 0;
     thead tr {
-      text-transform: uppercase;
       font-size: 12px;
       th {
         border-bottom: 1px solid #e0e0e0;

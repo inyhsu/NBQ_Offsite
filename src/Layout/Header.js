@@ -12,7 +12,6 @@ const HeaderBackground = styled.header`
 const HeaderTitle = styled.h1`
   color: #fff;
   font-size: 16px;
-  text-transform: uppercase;
   margin: 0;
 `;
 const HeaderRight = styled.button`

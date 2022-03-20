@@ -28,14 +28,14 @@ const SecondHeaderRight = styled.button`
   bottom: 0;
   right: 0;
   border: 0;
+  background-color: transparent;
+  border-left: 1px solid #666666;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
   outline: none;
   cursor: pointer;
   color: #ffffff;
-  background-color: transparent;
-  border-left: 1px solid #666666;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 16px;
 `;
 
 const SecondHeader = ({hideSecondHeader, handleSetSecondHeader, showContent, handleSetContent}) => {
