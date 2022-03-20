@@ -8,8 +8,6 @@ const SecondHeaderWrapper = styled.div`
   justify-content: center;
   background: #4e4a4a;
   position: relative;
-  height: 35px;
-  line-height: 35px;
 `;
 const TabStyled = styled.div`
   display: flex;
@@ -40,7 +38,7 @@ const SecondHeaderRight = styled.button`
   font-size: 16px;
 `;
 
-const SecondHeader = ({hideSecondHeader, handleSetSecondHeader}) => {
+const SecondHeader = ({hideSecondHeader, handleSetSecondHeader, showContent, handleSetContent}) => {
   const tabs = [
     { id: "a" },
     { id: "b", icon: "faTwitter" },
@@ -50,6 +48,18 @@ const SecondHeader = ({hideSecondHeader, handleSetSecondHeader}) => {
   ];
   const [activeTab, setActiveTab] = useState("a");
 
+  const handleTab = (id) =>{
+    setActiveTab(id)
+
+    if(id === 'a'){
+      showContent = true;
+    }else{
+      showContent = false;
+    }
+    console.log(showContent)
+    handleSetContent(showContent)
+  }
+
   //render each Tab
   const renderTab = () =>
     tabs.map((t, i) => {
@@ -57,7 +67,7 @@ const SecondHeader = ({hideSecondHeader, handleSetSecondHeader}) => {
         <TabStyled
           key={i}
           className={activeTab === t.id ? "is-active" : ""}
-          onClick={() => setActiveTab(t.id)}
+          onClick={() => handleTab(t.id)}
         >
           {t.id === "a" ? (
             "ALL"
