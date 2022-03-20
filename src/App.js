@@ -18,7 +18,6 @@ const Card = styled.div`
 function App() {
   const [hideSecondHeader, setSecondHeader] = useState(false);
   const [showContent, setContent] = useState(true);
-  console.log(showContent)
   return (
     <div className="App">
       <Card>

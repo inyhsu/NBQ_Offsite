@@ -49,14 +49,15 @@ const SecondHeader = ({hideSecondHeader, handleSetSecondHeader, showContent, han
   const [activeTab, setActiveTab] = useState("a");
 
   const handleTab = (id) =>{
+    //set active tab
     setActiveTab(id)
 
+    //check if card should show content
     if(id === 'a'){
       showContent = true;
     }else{
       showContent = false;
     }
-    console.log(showContent)
     handleSetContent(showContent)
   }
 
