@@ -16,6 +16,7 @@ const HeaderTitle = styled.h1`
   margin: 0;
 `;
 const HeaderRight = styled.button`
+  cursor: pointer;
   padding: 10px 10px;
   background: transparent;
   border: none;
@@ -30,7 +31,7 @@ const Header = ({ title }) => {
     <HeaderBackground>
       <HeaderTitle>{title}</HeaderTitle>
       <HeaderRight>
-        <FontAwesomeIcon icon={faQuestion} color="#005BAD"/>
+        <FontAwesomeIcon icon={faQuestion} color="#005BAD" />
       </HeaderRight>
     </HeaderBackground>
   );
